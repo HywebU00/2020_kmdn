@@ -318,21 +318,21 @@
 
     }
     .show_btn{
-        width: 25px;
-        height: 25px;
-        border-width:0 1px 1px 0;
-        border-style: solid;
-        border-color: lighten($color-dark, 10);
+        display: block;
+        width: 45px;
+        height: 45px;
         margin:0 auto;
-        cursor:pointer;
         clear:both;
+        background: url(../images/show_btn.png) no-repeat center;
+        background-size: 100%;
+        text-indent: -9999px;
     }
     .show_more{      
-        transform: rotate(45deg);
+        
         
     }
     .show_less{
-        transform: rotate(-135deg);
+        //transform: rotate(-135deg);
 }
     }
     

@@ -23,6 +23,27 @@
         box-shadow: 0px 0px 0px 1px $aHover inset;
     }
 }
+.slick-prev{
+    background: url(../images/icon_slider_arrow_left.png) center center no-repeat rgba(0,0,0, 0);
+    background-size: 60%;
+    left: 15px;
+    &:hover,
+    &:focus{
+        background: url(../images/icon_slider_arrow_left.png) center center no-repeat rgba(0,0,0, .3);
+        background-size: 60%;
+    }
+}
+.slick-next{
+    background: url(../images/icon_slider_arrow_right.png) center center no-repeat rgba(0,0,0, 0);
+    background-size: 60%;
+    right: 15px;
+    &:hover,
+    &:focus{
+        background: url(../images/icon_slider_arrow_right.png) center center no-repeat rgba(0,0,0, .3);
+        background-size: 60%;
+    }
+}
+
 
 // slick._scss
 // 首頁大圖輪播 

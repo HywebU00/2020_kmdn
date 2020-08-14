@@ -1,8 +1,11 @@
 .tabSet {
     max-width: 100%;
-    margin: 1em auto;
+    margin: 3em auto 1em;
     overflow: hidden;
     @extend %clearfix;
+    @include screen('tablet'){
+        margin:1em auto;
+    }
     @include screen('mobile') {
         width: auto;
         height: auto !important;
@@ -20,7 +23,7 @@
             left: 0;
             height: 1px;
             width: 100%;
-            background: #ddd;
+            background: $color-line;
             z-index: -1;
         }
         &.active>a {

@@ -107,7 +107,8 @@ h2{
         @include li-reset;
     }
     li{
-        padding:.5em 0;
+        padding:.6em 0;
+        border-bottom: 1px solid $color-line;
         a{
             display: inline-block;
             white-space: nowrap;
@@ -124,6 +125,9 @@ h2{
     time{
         color:$importantColor;
         margin-right: 5px;
+    }
+    a.more{
+        margin-top: .5em;
     }
 }
 .service_grp{
@@ -196,7 +200,7 @@ h2{
         flex: 0 1 calc(50% - 1em);
         width:50%;
         padding:.6em 0;
-        border-bottom: 1px solid $color-gray;
+        border-bottom: 1px solid $color-line;
         margin: 0 .5em;
         a{
             display: block;

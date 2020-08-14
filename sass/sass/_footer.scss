@@ -1,0 +1,151 @@
+footer {
+    @include box-sizing(border-box);
+    @include clearfix;
+    text-align: left;
+    font-size: 0.813em;
+    padding: 2em 0;
+    background: #e2e2e2;
+    .container {
+        @include gutter;
+        >div {
+            padding-bottom: 1em;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+        &:hover,
+        &:focus {
+            color: darken($primaryColor, 10);
+        }
+    }
+    .footer_logo {
+        display: inline-block;
+        vertical-align: middle;
+        img{
+            width: 165px;
+        }
+    }
+    .social_contact{
+        display: inline-block;
+        vertical-align: middle;
+        padding:0 1em;
+        margin:.5em 1em;
+        border-left: 1px solid  $color-hr;
+        border-right: 1px solid  $color-hr;
+        ul{
+            @include li-reset;
+        }
+        li{
+            display: inline-block;
+            padding:0 3px;
+            a{
+                display: block;
+                width: 25px;
+            }
+            img{
+                width: 25px;
+                vertical-align: middle;
+            }
+        }
+    }
+    .footer_info {
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+        @include gutter();
+
+    }
+    .footer_icon {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+        @include gutter();
+    }
+    // 版權連結
+    .footer_link {
+        @include li-reset();
+        @include clearfix();
+        margin: 1.5em 0 .5em;
+        li {
+            float: left;
+            display: block;
+            margin: 0px 5px 5px 0px;
+            padding:0 .5em;
+            border-right: 1px solid  $color-hr;
+            &:first-of-type{
+                padding-left: 0;
+            }
+            &:last-of-type{
+                padding-right: 0;
+                border: none;
+            }
+            a {
+                display: block;
+                padding: 0;
+                color: $importantColor;
+                border-radius:4px;
+                line-height: 1;
+                @include transition(all, .3s, ease-out);
+                &:hover,
+                &:focus {
+                    color: $aHover;
+                }
+            }
+        }
+    }
+    p {
+        line-height: 1.65em;
+    }
+    .update,
+    .counter {
+        display: inline-block;
+        margin-right: 5px;
+        em {
+            font-style: normal;
+            color: $importantColor;
+            padding: 0 .5em;
+        }
+    }
+    .footer_icon {
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        @include screen('mobile'){
+            display: none;
+        }
+        >img{
+            margin:0 2px;
+            @include screen('tablet'){
+                margin-bottom: 10px;
+            }
+        }
+        a {
+            display: inline-block;
+            vertical-align: top;
+            position:relative;
+            margin:0 2px -6px;
+             &:focus {
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    box-shadow: 0px 0px 0px 1px $aHover inset;
+                    z-index: 99;
+                }
+            }
+        }
+        img {
+            max-width: 120px;
+        }
+    }
+}

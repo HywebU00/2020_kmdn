@@ -139,13 +139,13 @@
             justify-content: space-between;
             overflow: hidden;
             padding-top: 5px;
-            height: 680px;
-            @include screen('tablet'){
-                height: 1020px;
-            }
-            @include screen('mobile'){
-                height: 2700px;
-            }
+            // height: 680px;
+            // @include screen('tablet'){
+            //     height: 1020px;
+            // }
+            // @include screen('mobile'){
+            //     height: 2700px;
+            // }
             &:after{
                 content:"";
                 flex:auto;

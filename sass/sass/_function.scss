@@ -4,8 +4,8 @@ $function_color:#888;
 %function_before {
     vertical-align: middle;
     content: "";
-    width: 1.2em;
-    height: 1.2em;
+    width: 1em;
+    height: 1em;
     margin-right: .2em;
     display: inline-block;
 }
@@ -15,6 +15,7 @@ div.function {
     margin: .5em 0;
     ul {
         @include li-reset;
+        float: right;
         li {
             display: block;
             float: left;
@@ -28,6 +29,8 @@ div.function {
                 border-color: $function_color;
                 color: #FFF;
                 border-radius: 4px;
+                display: flex;
+                align-items: center;
                 &:hover,
                 &:focus {
                     background: darken($aHover, 0);
@@ -56,6 +59,14 @@ div.function {
                     @extend %function_before;
                     background: url(../images/basic/icon_forward.svg) no-repeat center center;
                     background-size: cover;
+                }
+            }
+            &.icon_home {
+                a:before {
+                    @extend %function_before;
+                    background: url(../images/icon/icon_home.svg) no-repeat center center;
+                    background-size: cover;
+                    filter: invert(1);
                 }
             }
         }

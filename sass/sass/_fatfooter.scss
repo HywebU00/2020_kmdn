@@ -101,6 +101,7 @@
                     margin-top: 5px;
                     @include screen('mobile') {
                         width: auto;
+                        display: none;
                     }
                     li {
                         display: block;
@@ -134,6 +135,52 @@
                     ul {
                         display: none;
                     }
+                }
+            }
+        }
+    }
+}
+.branch_list{
+    margin:15px;
+    .container{
+        background: $color-bg;
+        padding:1.5em 2em;
+        ul{
+            display:flex;
+            flex-wrap:wrap;
+            @include li-reset;
+        }
+        li{
+            flex: 0 1 25%;
+            margin:.5em 0;
+            color: $color-word;
+            @include screen('tablet'){
+                flex-basis: 50%;
+            }
+            @include screen('xs_mobile'){
+                flex-basis:100%;
+            }
+            .branch{
+                font-weight: bold;
+                font-size: 1em;
+                color:$primaryColor;
+                margin:0 0 .5em 0;
+            }
+            span{
+                display: inline-block;
+                margin-right: 1em;
+                font-size: .938em;
+            }
+        }
+        .address{
+            font-size: .938em;
+            a{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                img{
+                    width: 100%;
                 }
             }
         }

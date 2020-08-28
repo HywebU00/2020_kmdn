@@ -5,14 +5,18 @@
     padding: .5em 0 .5em;
     min-height: 35px;
     border-top: 1px solid #DDD;
-    border-bottom: 1px solid #DDD;
+    //border-bottom: 1px solid #DDD;
     @include screen('mobile') {
         margin: .6em 0;
         padding: .5em 0 .5em;
+        text-align: left;
     }
     .share {
         display: inline-block;
         vertical-align: top;
+        @include screen('mobile'){
+            margin-top:.6em;
+        }
     }
     .function {
         display: inline-block;
@@ -24,6 +28,9 @@
         display: block;
         margin-top: .6em;
         color:#666;
+        @include screen('mobile'){
+            float: none;
+        }
         span{
             font-size:.938em;
             @include screen('mobile') {
@@ -44,6 +51,36 @@
             height: 12px;
             top:.3em;
             background: url(../images/basic/icon_time.png) no-repeat center center;
+            background-size: 12px;
+        }
+    }
+    .click_rate{
+        float: left;
+        min-width: 100px;
+        display: block;
+        margin: .6em 0 0 .5em;
+        color:#666;
+        @include screen('mobile'){
+            float: none;
+            margin-left: 0;
+        }
+        span{
+            font-size:.938em;
+        }
+        .times{
+            font-family:georgia;
+            font-size:1.125em;
+            @include screen('mobile') {
+                font-size:.938em;
+            }
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            top:.3em;
+            background: url(../images/basic/icon_clickrate.png) no-repeat center center;
             background-size: 12px;
         }
     }

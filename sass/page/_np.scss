@@ -5,6 +5,9 @@
         padding:1em 0;
         margin: 0;
         overflow:hidden;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     li {
         display: block;
@@ -31,7 +34,7 @@
             padding: 1em 1em 1em 2em;
             display: block;
             vertical-align: top;
-            @include text-overflow;
+            //@include text-overflow;
             position:relative;
             @include aSetting_nocolor;
             .num{

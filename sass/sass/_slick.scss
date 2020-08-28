@@ -29,7 +29,7 @@
     left: 15px;
     &:hover,
     &:focus{
-        background: url(../images/icon_slider_arrow_left.png) center center no-repeat rgba(0,0,0, .3);
+        background: url(../images/icon_slider_arrow_left.png) center center no-repeat rgba(0,0,0, .4);
         background-size: 60%;
     }
 }
@@ -39,7 +39,7 @@
     right: 15px;
     &:hover,
     &:focus{
-        background: url(../images/icon_slider_arrow_right.png) center center no-repeat rgba(0,0,0, .3);
+        background: url(../images/icon_slider_arrow_right.png) center center no-repeat rgba(0,0,0, .4);
         background-size: 60%;
     }
 }
@@ -232,12 +232,25 @@
         padding: 12px 0px 15px 0px;
         margin: 0.5em 0px 1.2em;
         border-bottom: 1px solid $primaryColor;
+        color:$primaryColor;
     }
-    background: #fff;
+    //background: #fff;
     padding: 1em 0;
     clear: both;
     .cp_slider {
         @include gutter;
+        .slick-dots{
+           li {
+                button{
+                   &:before{
+                    background: $secondaryColor;
+                   } 
+                }
+           }
+        } 
+        .slick-next, .slick-prev{
+            background-color: rgba(0,0,0, .2);
+        }
     }
     .img-container {
         margin: 0px 15px;

@@ -75,15 +75,6 @@
     }
 }
 
-h2{
-    &.title{
-        color:$primaryColor;
-        span{
-            color:$secondaryColor;
-        }
-    }
-}
-
 .news_simple_link{
     padding-left: 2em;
     @include screen('tablet'){

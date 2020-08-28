@@ -11,7 +11,7 @@ table {
         text-align: left;
     }
     td {
-        border: #ddd 1px solid;
+        border-bottom: #ddd 1px solid;
         word-break: break-all;
         a {
             word-break: break-all;
@@ -20,8 +20,8 @@ table {
     th {
         background-color: #F3F3F3;
         color: #333;
-        border: #DDD 1px solid;
-        text-align: center;
+        border-bottom: #DDD 2px solid;
+        //text-align: center;
         white-space: nowrap;
     }
     &.table_hover {
@@ -33,6 +33,10 @@ table {
         tr:nth-child(even) {
             background: #F5F5F5;
         }
+    }
+    .file_download{
+        width: auto; 
+        text-align: left;
     }
 }
 .table_list {

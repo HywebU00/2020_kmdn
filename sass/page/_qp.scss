@@ -1,5 +1,16 @@
 .qp{
 	margin: 1em auto;
 	@include box-sizing;
-	padding:1em;
+	//padding:1em;
+}
+
+.form_block{
+	//border:1px solid $color-line;
+	padding:10px 0;
+	width: 70%;
+	margin:0 auto;
+	@include screen('mobile'){
+		width: 100%;
+		padding:0 5px;
+	}
 }

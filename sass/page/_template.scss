@@ -58,3 +58,32 @@ body {
         @include gutter(); //gutter 代表左右要留白
     }
 }
+
+h2, h3{
+    &.title{
+        color:$primaryColor;
+        span{
+            color:$secondaryColor;
+        }
+    }
+}
+
+.preface{
+    color:lighten($color-word, 10);
+    margin:1em 0;
+    padding:1.5em;
+    background: rgba($secondaryColor, .1);
+    table{
+        background: #fff;
+        td{
+            text-align: center;
+        }
+    }
+    .ps{
+        font-size: .875em;
+        color:$color-red;
+    }
+    .important{
+        color:$color-red;
+    }
+}

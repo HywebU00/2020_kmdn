@@ -232,5 +232,7 @@ $(function() {
         //          }
         //      }]
     });
+    
+    $('.list').find('li a').has('.num').addClass('hasNum');
 });
 

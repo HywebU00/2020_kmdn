@@ -87,3 +87,103 @@ h2, h3{
         color:$color-red;
     }
 }
+
+.newsletter{
+    .header{
+        background:$primaryColor;
+        background-image: url("../images/newsletter_header_bg.jpg"), linear-gradient( to left, $primaryColor 400px, lighten($primaryColor, 10));
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
+        @include screen('mobile'){
+            background-image: none;
+            position: relative;
+            box-shadow: none;
+            padding:10px 0;
+        }
+        &:before{
+            content: none;
+        }
+        .container{
+            @include gutter();
+            .sidebarCtrl, .searchCtrl{
+                display: none!important;
+            }
+            .flex_wrapper{
+                @include screen('mobile'){
+                    flex-wrap:wrap;
+                } 
+            }
+            
+        }
+        
+        h1{
+            height: 60px;
+            flex-basis: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include screen('mobile'){
+                padding: 10px 0;
+            }
+            img{
+                max-width: 170px;
+                max-height: 60px;
+            }
+            a:focus{
+                box-shadow: 0 0px 0px 1px #fff inset;
+            }
+        }
+        .top_title{
+            color:#fff;
+            text-align: center;
+            padding: 5px 0;
+            @include screen('mobile'){
+                width: 100%;
+                text-align: left;
+                padding-left: 15px;
+            }
+            .top_title_ch{
+                font-size: 1.25em;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            .top_title_en{
+
+            }
+        }
+        .publication{
+            padding: 5px 0;
+            font-weight: bold;
+            line-height: 1.5;
+            color:#fff;
+            text-shadow: 0 1px 4px rgba(0,0,0, .6);
+            @include screen('mobile'){
+                width: 100%;
+                padding-left: 15px;
+                text-shadow:none;
+            }
+            .period{
+                font-size: 1.125em;
+            }
+            
+        }
+    }
+    .innerpage{
+        @include screen('mobile'){
+            padding-top:2em; 
+        }
+    }
+    .lp{
+        .list{
+            margin-bottom: 2em;
+        }
+    }
+    .btn_subscribe{
+        float: right;
+        @include btn_setting($form-focus, #FFF);
+        @include screen('mobile'){
+            float: none;
+        }
+    }
+}

@@ -381,7 +381,9 @@
             width: 200px;
         }
         @include screen('xs_mobile') {
-            width: 150px;
+            width: 100%;
+            float: none;
+            margin-left: 0;
         }
     }
 
@@ -389,13 +391,13 @@
         margin-left: 0;
     }
 
-    .title-container {
-        h3 {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
+    // .title-container {
+    //     h3 {
+    //         white-space: nowrap;
+    //         overflow: hidden;
+    //         text-overflow: ellipsis;
+    //     }
+    // }
 
 }
 

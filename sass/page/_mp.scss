@@ -516,7 +516,9 @@
         }
         ul{
             display: flex; 
-            overflow-y: auto;    
+            overflow-y: auto; 
+            scrollbar-width:none;
+            scrollbar-color:transparent;   
             @include li-reset;
             padding-bottom: .5em;
             .m_tabItem{

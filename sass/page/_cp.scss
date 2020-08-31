@@ -39,7 +39,11 @@ h1.title, h2.title {
         float:none;
         margin:1em auto;
         width: 50%;
-        max-width: 600px;
+        min-width: 600px;
+        @include screen('mobile'){
+            width: 100%;
+            min-width: 100%;
+        }
     }
     &.small_size {
         font-size: .938em;

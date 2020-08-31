@@ -240,12 +240,12 @@ $(function() {
         // 目前的頁籤區塊
         var $tab = $(this);
  
-        var $defaultLi = $('ul.m_tabs li', $tab).eq(_showTab).addClass('active');
+        var $defaultLi = $('.m_tabs ul li', $tab).eq(_showTab).addClass('active');
         $($defaultLi.find('a').attr('href')).siblings().hide();
  
         // 當 li 頁籤被點擊時...
         // 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
-        $('ul.m_tabs li', $tab).click(function() {
+        $('.m_tabs ul li', $tab).click(function() {
             // 找出 li 中的超連結 href(#id)
             var $this = $(this),
                 _clickTab = $this.find('a').attr('href');

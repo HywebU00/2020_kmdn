@@ -194,11 +194,14 @@
         padding:.6em 0;
         border-bottom: 1px solid $color-line;
         margin: 0 .5em;
+        display: flex;
+        align-items: center;
         a{
             display: block;
             color:$primaryColor;
             position: relative;
             padding-right: 2.5em;
+            width: 100%;
             &:after{
                 content:"";
                 position: absolute;
@@ -499,6 +502,7 @@
             top:0;
             height: 100%;
             width: 15px;
+            filter:invert(.5);
         }
         &:before{
             left: -5px;

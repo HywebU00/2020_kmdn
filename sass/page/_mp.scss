@@ -232,7 +232,7 @@
         overflow: hidden;
         padding-top: 5px;
         padding-left: 0;
-
+        margin:0;
         // height: 680px;
         // @include screen('tablet'){
         //     height: 1020px;
@@ -490,8 +490,8 @@
     @include screen('mobile') {
         display: block;
     }
-    &::-webkit-scrollbar {
-        height: 3px;  
+    ::-webkit-scrollbar {
+        height: 0;  
     }
     .m_tabs{
         padding:0 .5em;
@@ -516,7 +516,7 @@
         }
         ul{
             display: flex; 
-            overflow-y: scroll;    
+            overflow-y: auto;    
             @include li-reset;
             padding-bottom: .5em;
             .m_tabItem{

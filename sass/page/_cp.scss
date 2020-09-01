@@ -38,8 +38,9 @@ h1.title, h2.title {
     .pic_block{
         float:none;
         margin:1em auto;
-        width: 50%;
+        width: 80%;
         min-width: 600px;
+        max-width: 80%;
         @include screen('mobile'){
             width: 100%;
             min-width: 100%;

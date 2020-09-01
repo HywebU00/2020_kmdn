@@ -168,7 +168,7 @@ $(function() {
             _body.removeClass('noscroll');
             _nav.prependTo('.header .container');
             _search.appendTo('.header .container .flex_wrapper');
-            _menu.appendTo('.header .container');
+            _menu.appendTo('.header');
             _search.removeClass('m_search');
             _search.show();
             search_mode = false;

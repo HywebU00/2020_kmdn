@@ -160,6 +160,9 @@ $(function() {
             });
             _body.off('touchmove');
             $('.m_search').hide();
+            //手機版即時新聞顯示前三則
+            $(".news_simple_link li").filter(":lt(3)").show().end().filter(":gt(2)").hide()
+
         } else {
             /*-----------------------------------*/
             /////////////// PC版設定 /////////////
@@ -191,6 +194,7 @@ $(function() {
                     $('.menu').find('li ul').hide();
                 }
             });
+            $(".news_simple_link li").show();
         }
     }
     //設定resize 計時器

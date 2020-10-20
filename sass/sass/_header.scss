@@ -311,7 +311,7 @@
         display: block;
         vertical-align: middle;
         margin-left: .5em;
-        padding: .1em 0 .3em;
+        padding: .3em 0;
         clear: both;
 
         ul {
@@ -381,7 +381,7 @@
         }
 
         .form_grp {
-            width: 70%;
+            width: calc(100% - 60px);
             height: auto;
             padding: 0 0 0 5% !important;
             margin-top: 0;

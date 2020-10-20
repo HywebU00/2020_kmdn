@@ -73,7 +73,7 @@ footer {
             float: left;
             display: block;
             margin: 0px 5px 5px 0px;
-            padding:0 .5em;
+            padding:.2em .5em;
             border-right: 1px solid  $color-hr;
             &:first-of-type{
                 padding-left: 0;
@@ -87,7 +87,7 @@ footer {
                 padding: 0;
                 color: $importantColor;
                 border-radius:4px;
-                line-height: 1;
+                line-height: 1.5;
                 @include transition(all, .3s, ease-out);
                 &:hover,
                 &:focus {

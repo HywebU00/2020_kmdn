@@ -83,7 +83,10 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         color: $color-word;
-      text-decoration: none;
+        text-decoration: none;
+        @include screen('mobile'){
+            margin-right: 0;
+        }
         span {
             color:$secondaryColor;
             margin-right: 15px;

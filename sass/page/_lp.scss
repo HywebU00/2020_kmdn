@@ -42,7 +42,8 @@
             &>li {
                 padding: .5em 0;
                 border-bottom: 1px solid #DDD;
-                position: relative; // outline: 1px solid blue;
+                position: relative; 
+                // outline: 1px solid blue;
                 .tag {
                     margin-left: .5em;
                     display: inline-block;
@@ -83,6 +84,9 @@
                     }
                     p{
                         margin:.5em 0;
+                        display: block;
+                        overflow: initial;
+                        max-height: initial;
                     }
 
                     .num {

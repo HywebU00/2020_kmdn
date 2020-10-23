@@ -65,6 +65,9 @@
                         border-bottom: none;
                         border-left: none;
                         margin-bottom: .2em;
+                        @include screen('mobile'){
+                            content: none;
+                        }
                     }
                 }
             }
@@ -81,6 +84,9 @@
                         width: 100%;
                         height: 3px;
                         background: $lightColor;
+                        @include screen('mobile'){
+                            content: none;
+                        }
                     }
 
                     &:after {
@@ -277,7 +283,8 @@
                 float: none;
                 width: 100%;
                 text-align: left;
-
+                border-bottom: 1px solid #CCC;
+                background:#fff;
                 ul {
                     background: #FFF;
                 }
@@ -287,7 +294,7 @@
                     min-height: 2em;
                     line-height: 2em;
                     background: #FFF;
-                    border-bottom: 1px solid #CCC;
+                    
                     &.active{
                         &:before{
                             content:none;
@@ -296,27 +303,26 @@
                 }
 
                 &.hasChild {
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        right: 16px;
+                        top: 1.25em;
+                        width: 5px;
+                        line-height: 1.25em;
+                        height: 5px;
+                        border: 2px solid #222;
+                        transform: rotate(45deg);
+                        border-top: none;
+                        border-left: none;
+                        transition: .3s;
+                    }
                     >a {
                         padding: .5em 1em;
                         color: #222;
                         background: #FFF;
-                        padding-right: 36px;
-                        position: relative;
-
-                        &:after {
-                            content: '';
-                            position: absolute;
-                            right: 16px;
-                            top: 1.25em;
-                            width: 5px;
-                            line-height: 1.25em;
-                            height: 5px;
-                            border: 2px solid #222;
-                            transform: rotate(45deg);
-                            border-top: none;
-                            border-left: none;
-                            transition: .3s;
-                        }
+                        margin-right: 50px;         
                     }
                 }
 

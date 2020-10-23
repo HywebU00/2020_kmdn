@@ -199,6 +199,26 @@
     }
     
 }
+
+.ad_banner{
+    ul{
+        @include li-reset;
+    }
+    li{
+        @include make-xs-column(6);  
+        @include make-sm-column(4);  
+        @include make-md-column(3);  
+        @include make-lg-column(3); 
+        @include gutter();
+        margin-bottom: 30px;
+        .img-container{
+            @include aspect-ratio(3, 1);
+            img{
+                object-fit: contain;
+            }
+        }
+    }
+}
 .search_block {
     // width: 80%;
     // margin:0 auto;

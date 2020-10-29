@@ -167,7 +167,7 @@
         padding:5px;
         margin:10px;
         box-shadow: 0 0 5px rgba(0,0,0, .3);
-        flex:0 1 calc(25% - 20px);
+        flex-basis:calc(25% - 20px);
         .img-container{
             @include aspect-ratio(3, 2);
         }
@@ -272,12 +272,12 @@
             .form_content {
                 display: flex;
                 flex-wrap: wrap;
-                flex: 1 1 calc(100% - 80px);
-
+                flex-grow: 1;
+                flex-basis: calc(100% - 80px);
                 .datepick {
-                    flex:0 1 45%;
+                    flex:0 1 15em;
                     max-width: 15em;
-                    padding-right: 1em;
+                    padding-right: 0;
                     position: relative;
                     @include screen("xs_mobile"){
                         flex:0 0 100%;
@@ -285,11 +285,12 @@
                     >input[type="text"] {
                         max-width: 15em;
                         padding-right: 2em;
+                        //width: 15em;
                     }
                     i{
                         position: absolute;
                         padding: .37em .1em !important;
-                        right: 1.5em;
+                        right: .5em;
                         top: .2em;
                         min-width: 1em;
                         background: none;
@@ -298,8 +299,9 @@
                         pointer-events: none;
                     }
                     &+.datepick{
-                        padding-left: 1em;
-                        flex:0 1 calc(45% + 1em);
+                        //padding-left: 1em;
+                        flex:0 1 15em;
+                        margin-left: 1.5em;
                         @include screen("xs_mobile"){
                             flex:0 0 100%;
                         }
@@ -307,7 +309,7 @@
                             content: "至";
                             display: inline-block;
                             position: absolute;
-                            left: -.65em;
+                            left: -1.2em;
                             top: .5em;
                         }
                     }

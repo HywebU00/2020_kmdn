@@ -82,7 +82,7 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        color: $color-word;
+        color: $color-red;
         text-decoration: none;
         @include screen('mobile'){
             margin-right: 0;
@@ -92,7 +92,7 @@
             margin-right: 15px;
         }
         &:hover {
-            color: $secondaryColor  ;
+            color: darken($color-red, 10);
         }
     }
 }

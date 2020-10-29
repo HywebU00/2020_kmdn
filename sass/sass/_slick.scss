@@ -63,6 +63,9 @@
                 text-align: left;
             }
         }
+        img{
+            object-fit: fill;
+        }
     }
     .slick-prev {
         @include screen('mobile') {

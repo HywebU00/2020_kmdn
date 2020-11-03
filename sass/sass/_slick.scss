@@ -52,6 +52,7 @@
     //padding-bottom: 3em;
     @include gutter(0);
     .img-container {
+        background: #000;
         @include aspect-ratio(2, 1.1); //PC版比例
         // @include screen('mobile') {
         //     @include aspect-ratio(5, 3); //Mobile版比例
@@ -64,7 +65,7 @@
             }
         }
         img{
-            object-fit: fill;
+            object-fit: contain;
         }
     }
     .slick-prev {

@@ -192,6 +192,9 @@
                 color:lighten($color-word, 20);
             }
         }
+        img{
+            object-fit:contain;
+        }
         &:hover{
             img{
                 transform: scale(1.1);

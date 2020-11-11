@@ -261,6 +261,7 @@
 
     li {
         max-height: 310px;
+        height: 310px;
         margin: 0 15px 30px;
         flex-basis: calc(25% - 30px);
         //max-width:300px; 
@@ -311,8 +312,14 @@
         a {
             display: block;
             width: 100%;
-            height: auto;
+            height: 100%;
+            position: absolute;
+            top:0;
+            left: 0;
             color:$color-word;
+            @include screen('mobile'){
+                position: static;
+            }
             &:before {
                 content: "";
                 margin: 0;

@@ -109,6 +109,23 @@ footer {
             padding: 0 .5em;
         }
     }
+    .contact_info{
+        span{
+            border-right: 1px solid $color-hr;
+            padding: 0 .5em;
+            &:first-child{
+                padding-left: 0;
+            }
+            &:last-child{
+                border:none;
+            }
+            @include screen('xs_mobile'){
+                display: block;
+                border:none;
+                padding:0;
+            }
+        }
+    }
     .footer_icon {
         position: absolute;
         bottom: 0;

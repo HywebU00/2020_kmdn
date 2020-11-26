@@ -501,6 +501,7 @@ input[type="reset"]:focus,
 input[type="file"]:focus,
 input[type="tel"]:focus,
 input[type="password"]:focus,
+input[type="email"]:focus,
 textarea:focus,
 select:focus {
     border: 1px solid lighten($form-focus, 20);
@@ -600,6 +601,11 @@ input[disable] {
     input[disable] {
         background: transparent;
         color: #666;
+        // &:focus{
+        //     border: 1px solid lighten($form-focus, 20);
+        //     @include box-shadow(0px 0px 0px 2px lighten($form-focus, 20));
+        //     outline: none;
+        // }
     }
 
     .upload_btn {
@@ -615,6 +621,11 @@ input[disable] {
         &:hover,
         &:focus {
             cursor: pointer !important;
+        }
+        &:focus{
+            border: 1px solid $lightColor;
+            @include box-shadow(0px 0px 0px 2px $lightColor);
+            outline: none;
         }
     }
 }
@@ -646,6 +657,11 @@ img.captcha {
 
     ~.btn {
         margin-top: -1px;
+        &:focus{
+            border: 1px solid lighten($form-focus, 20);
+            @include box-shadow(0px 0px 0px 2px lighten($form-focus, 20));
+            outline: none;
+        }
     }
 
     ~img {

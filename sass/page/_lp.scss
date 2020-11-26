@@ -206,6 +206,7 @@
 
 .ad_banner{
     ul{
+        overflow:hidden; 
         @include li-reset;
     }
     li{
@@ -215,6 +216,18 @@
         @include make-lg-column(3); 
         @include gutter();
         margin-bottom: 30px;
+        a{
+            padding:2px;
+            display: block;
+            transition: all .5s;
+            &:hover{
+                box-shadow:0 1px 5px rgba(0,0,0, .3);
+            }
+            &:focus{
+                outline: none;
+                box-shadow: 0 0px 0px 2px #00577e inset;
+            }
+        }
         .img-container{
             @include aspect-ratio(3, 1);
             img{
@@ -284,6 +297,11 @@
                     position: relative;
                     @include screen("xs_mobile"){
                         flex:0 0 100%;
+                    }
+                    label{
+                        font-size: 0;
+                        height: 0;
+                        width: 0;
                     }
                     >input[type="text"] {
                         max-width: 15em;

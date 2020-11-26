@@ -471,8 +471,8 @@ $(function() {
         e.preventDefault();
     });
     $('.scrollToTop').keydown(function(e) {
-        _body.find('a:first').focus();
-        e.preventDefault();
+      _body.find('a.goCenter').focus();
+      e.preventDefault();
     });
     /*--------------------------------------------------------*/
     /////設定img 在IE9+ SAFARI FIREFOX CHROME 可以object-fit/////

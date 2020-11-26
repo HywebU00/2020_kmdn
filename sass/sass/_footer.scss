@@ -85,7 +85,7 @@ footer {
             a {
                 display: block;
                 padding: 0;
-                color: $importantColor;
+                color: $linkColor;
                 border-radius:4px;
                 line-height: 1.5;
                 @include transition(all, .3s, ease-out);
@@ -105,7 +105,7 @@ footer {
         margin-right: 5px;
         em {
             font-style: normal;
-            color: $importantColor;
+            color: $linkColor;
             padding: 0 .5em;
         }
     }

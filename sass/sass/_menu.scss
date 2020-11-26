@@ -35,6 +35,9 @@
                 @include screen('tablet') {
                     padding: .2em 1em;
                 }
+                &:focus{
+                    box-shadow: 0 0px 0px 1px $lightColor inset;
+                }
 
                 &.active {
                     position: relative;

@@ -232,7 +232,8 @@ th {
 /* button{*/
 /* 	@include opacity(0.8);*/
 /* }*/
-/*https://medium.com/@vilcins/usefull-sass-mixins-7a68c5491bda*/ /* Grid system*/
+/*https://medium.com/@vilcins/usefull-sass-mixins-7a68c5491bda*/
+/* Grid system*/
 /*== Media queries breakpoints*/
 /**/
 /*## Define the breakpoints at which your layout will change, adapting to different screen sizes.*/
@@ -2893,12 +2894,12 @@ abbr[title] {
   margin-bottom: 0.1em;
 }
 
-a:focus {
+a:focus-visible {
   outline: none;
-  box-shadow: 0 0px 0px 1px #00577e inset;
+  box-shadow: 0 0px 0px 2px #00577e inset;
 }
 @media screen and (max-width: 767px) {
-  a:focus {
+  a:focus-visible {
     box-shadow: none;
   }
 }
@@ -2965,6 +2966,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   left: calc(100% - 5px);
   border-color: transparent transparent transparent #00577e;
 }
+a.more:focus-visible {
+  box-shadow: 0 0px 0px 2px #00577e inset;
+}
 
 .scrollToTop {
   width: 50px;
@@ -2972,7 +2976,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   border-radius: 50%;
   background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.4);
   text-align: center;
-  color: #FFF;
+  color: #fff;
   line-height: 50px;
   text-decoration: none;
   position: fixed;
@@ -3005,7 +3009,7 @@ img.img-responsive {
 }
 .tooltip span {
   display: inline-block;
-  background: #DEDEDE;
+  background: #dedede;
   text-align: center;
   padding: 10px;
   width: 100px;
@@ -3020,7 +3024,7 @@ img.img-responsive {
 .header {
   position: relative;
   z-index: 99;
-  background: #FFF;
+  background: #fff;
 }
 @media screen and (max-width: 767px) {
   .header {
@@ -3034,7 +3038,7 @@ img.img-responsive {
   content: "";
   width: 100%;
   height: 2.4em;
-  background: #FFF;
+  background: #fff;
   border-bottom: 1px solid #aaa;
   position: absolute;
   top: 0;
@@ -3419,7 +3423,7 @@ img.img-responsive {
   margin-top: 10px;
 }
 .search.m_search .keywordHot a {
-  color: #FFF;
+  color: #fff;
 }
 .search.m_search .keywordHot a:hover, .search.m_search .keywordHot a:focus {
   color: #2a3d61;
@@ -3460,6 +3464,9 @@ img.img-responsive {
   max-height: 70px;
   margin: 0 auto;
 }
+.banner_area a:focus-visible {
+  outline: 2px solid #00577e;
+}
 .banner_area img {
   max-width: 100%;
   -o-object-fit: contain;
@@ -3477,11 +3484,11 @@ img.img-responsive {
 }
 @media screen and (max-width: 767px) {
   .header.fixed {
-    background: #FFF;
+    background: #fff;
   }
 }
 .header.fixed .menu > ul > li > a {
-  color: #FFF;
+  color: #fff;
 }
 
 .language {
@@ -3583,15 +3590,15 @@ img.img-responsive {
   min-height: 2.5em;
   font-weight: bold;
   line-height: 2.5em;
-  color: #FFF;
+  color: #fff;
 }
 @media screen and (max-width: 991px) {
   .menu > ul > li > a {
     padding: 0.2em 1em;
   }
 }
-.menu > ul > li > a:focus {
-  box-shadow: 0 0px 0px 1px #75c6ff inset;
+.menu > ul > li > a:focus-visible {
+  box-shadow: 0 0px 0px 2px #75c6ff inset;
 }
 .menu > ul > li > a.active {
   position: relative;
@@ -3677,7 +3684,7 @@ img.img-responsive {
 }
 .menu li li a {
   padding: 0.6em 1.2em;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
 }
 .menu li li a:hover, .menu li li a:focus {
@@ -3699,7 +3706,7 @@ img.img-responsive {
   top: 1.3em;
   width: 6px;
   height: 6px;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   transform: rotate(45deg);
   border-bottom: none;
   border-left: none;
@@ -3758,7 +3765,7 @@ img.img-responsive {
   position: absolute;
   top: 0;
   left: 0;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   height: 3em;
   background: #2a3d61;
@@ -3770,7 +3777,7 @@ img.img-responsive {
   width: 100%;
   box-shadow: 0px 0px 4px RGBA(0, 0, 0, 0.4);
   margin-bottom: 1em;
-  background: #CCC;
+  background: #ccc;
 }
 .sidebar .m_area .menu a {
   display: block;
@@ -3801,17 +3808,17 @@ img.img-responsive {
   float: none;
   width: 100%;
   text-align: left;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #ccc;
   background: #fff;
 }
 .sidebar .m_area .menu li ul {
-  background: #FFF;
+  background: #fff;
 }
 .sidebar .m_area .menu li > a {
   padding: 0.5em 1em;
   min-height: 2em;
   line-height: 2em;
-  background: #FFF;
+  background: #fff;
 }
 .sidebar .m_area .menu li > a.active:before {
   content: none;
@@ -3836,11 +3843,11 @@ img.img-responsive {
 .sidebar .m_area .menu li.hasChild > a {
   padding: 0.5em 1em;
   color: #222;
-  background: #FFF;
+  background: #fff;
   margin-right: 50px;
 }
 .sidebar .m_area .menu li li {
-  background: #FFF;
+  background: #fff;
 }
 .sidebar .m_area .menu li li a {
   min-height: 1.5em;
@@ -3862,7 +3869,7 @@ img.img-responsive {
 .sidebar .m_area .menu li li li a {
   background: rgba(0, 0, 0, 0.15) !important;
   padding: 0.8em 1em 0.8em 4em !important;
-  border-bottom: 1px solid #BBB;
+  border-bottom: 1px solid #bbb;
 }
 .sidebar .m_area .menu li li li a:hover, .sidebar .m_area .menu li li li a:focus {
   background: rgba(0, 0, 0, 0.25) !important;
@@ -3909,7 +3916,7 @@ img.img-responsive {
   line-height: 2em;
   padding: 0.5em 1em;
   font-size: 0.938em;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -4257,7 +4264,7 @@ footer .footer_icon img {
   font-size: 0.813em;
   display: block;
   min-width: 6em;
-  color: #FFF;
+  color: #fff;
   border: none;
   background: #00577e;
   position: absolute;
@@ -4272,7 +4279,7 @@ footer .footer_icon img {
   position: absolute;
   width: 12px;
   height: 12px;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   border-left: none;
   border-bottom: none;
   transform: rotate(-45deg);
@@ -4345,8 +4352,8 @@ footer .footer_icon img {
   box-shadow: none;
   color: #8fd1ff;
 }
-.fatfooter nav ul li a:focus {
-  box-shadow: 0 0px 0px 1px #75c6ff inset;
+.fatfooter nav ul li a:focus-visible {
+  box-shadow: 0 0px 0px 2px #75c6ff inset;
 }
 .fatfooter nav ul li ul {
   margin-top: 5px;
@@ -7450,16 +7457,17 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   right: 0;
   bottom: 0;
   z-index: 99;
-  box-shadow: 0px 0px 0px 1px #00577e inset;
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   transition: 0.3s ease-out;
 }
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+.slick-prev:focus-visible,
+.slick-next:focus-visible {
   border: none !important;
   outline: none;
-  box-shadow: 0px 0px 0px 1px #00577e inset;
+  box-shadow: 0px 0px 0px 2px #00577e inset;
 }
 
 .slick-prev {
@@ -7684,7 +7692,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
      object-fit: contain;
 }
 
-[class^=adSlider] .slick-prev, [class^=adSlider] .slick-next {
+[class^=adSlider] .slick-prev,
+[class^=adSlider] .slick-next {
   background: url(../images/left.png) center center no-repeat;
 }
 [class^=adSlider] .slick-next {
@@ -7733,7 +7742,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .lightbox_slider .cp_slider .slick-dots li button:before {
   background: #007AB1;
 }
-.lightbox_slider .cp_slider .slick-next, .lightbox_slider .cp_slider .slick-prev {
+.lightbox_slider .cp_slider .slick-next,
+.lightbox_slider .cp_slider .slick-prev {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .lightbox_slider .img-container {
@@ -7765,7 +7775,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   padding: 0.5em !important;
   position: absolute;
   background: rgba(0, 0, 0, 0.75) !important;
-  color: #FFF;
+  color: #fff;
   bottom: -2em !important;
   left: 0;
   font-size: 0.938em !important;
@@ -7936,7 +7946,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   transform: rotate(45deg);
   position: absolute;
   top: 18px;
-  background: #DDD;
+  background: #ddd;
   left: 6px;
   transition: 0.3s all ease-out;
 }
@@ -7947,7 +7957,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   transform: rotate(-45deg);
   position: absolute;
   top: 18px;
-  background: #DDD;
+  background: #ddd;
   left: 6px;
   transition: 0.3s all ease-out;
 }
@@ -7957,7 +7967,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   border: none;
 }
 .slick-lightbox-close:hover:before, .slick-lightbox-close:hover:after, .slick-lightbox-close:focus:before, .slick-lightbox-close:focus:after {
-  background: #FFF;
+  background: #fff;
 }
 
 .Syncing_slider {
@@ -7976,7 +7986,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   text-align: center;
   font-weight: bold;
   max-width: 100px;
-  color: #FFF;
+  color: #fff;
   padding: 0.2em 0.5em;
   margin: 0px auto;
   background: #2a3d61;
@@ -8017,7 +8027,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: absolute;
   background: RGBA(0, 0, 0, 0.55);
   text-align: center;
-  color: #FFF;
+  color: #fff;
   padding: 0.5em;
   box-sizing: border-box;
   overflow: hidden;

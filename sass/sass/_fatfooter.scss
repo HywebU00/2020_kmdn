@@ -1,191 +1,191 @@
 .fatfooter {
-    @include make-fatfooter($fatfooter-length, 100%);
-    @extend %clearfix;
+  @include make-fatfooter($fatfooter-length, 100%);
+  @extend %clearfix;
+  overflow: hidden;
+  padding-bottom: 1em;
+  margin: 0 auto;
+  background: $fatfooterBgColor;
+  //   @include screen('mobile') {
+  //     display: none;
+  // }
+  .container {
     overflow: hidden;
-    padding-bottom: 1em;
-    margin: 0 auto;
-    background: $fatfooterBgColor;
-    //   @include screen('mobile') {
-    //     display: none;
-    // }
-    .container {
-        overflow: hidden;
-        @include box-sizing;
-        @include gutter;
+    @include box-sizing;
+    @include gutter;
+  }
+  // 按鈕
+  .btn-fatfooter {
+    font-size: 0.813em;
+    display: block;
+    min-width: 6em;
+    color: #fff;
+    border: none;
+    background: $aHover;
+    position: absolute;
+    right: 1%;
+    z-index: 90;
+    text-indent: -9999px;
+    @include border-radius(4px);
+    &:before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border: 2px solid #fff;
+      border-left: none;
+      border-bottom: none;
+      transform: rotate(-45deg);
+      left: 50%;
+      top: 12px;
+      margin-left: -6px;
+      transition: 0.3s ease-out;
     }
-    // 按鈕
-    .btn-fatfooter {
-        font-size: .813em;
-        display: block;
-        min-width: 6em;
-        color: #FFF;
-        border: none;
-        background: $aHover;
-        position: absolute;
-        right: 1%;
-        z-index: 90;
-        text-indent: -9999px;
-        @include border-radius(4px);
-        &:before {
-            content: "";
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            border: 2px solid #FFF;
-            border-left: none;
-            border-bottom: none;
-            transform: rotate(-45deg);
-            left: 50%;
-            top: 12px;
-            margin-left: -6px;
-            transition: .3s ease-out;
-        }
-        &:hover,
-        &:focus {
-            background: darken($aHover, 10);
-            color: #fff;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-            box-shadow: none;
-            outline: none;
-            border: none;
-            cursor: pointer;
-        }
-        &.close {
-            &:before {
-                transform: rotate(135deg) !important;
-                top: 5px;
-            }
-        }
+    &:hover,
+    &:focus {
+      background: darken($aHover, 10);
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      box-shadow: none;
+      outline: none;
+      border: none;
+      cursor: pointer;
     }
-    nav {
-        overflow: hidden;
+    &.close {
+      &:before {
+        transform: rotate(135deg) !important;
+        top: 5px;
+      }
+    }
+  }
+  nav {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding: 3em 0 0 2em;
+    @include box-sizing;
+    @include screen('mobile') {
+      padding: 1em 0;
+    }
+    ul {
+      @include li-reset;
+      @include screen('mobile') {
+        width: 100%;
         display: block;
-        position: relative;
-        padding: 3em 0 0 2em;
+        margin: 0px auto;
+      }
+      li {
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        margin: 0 -5px 1em 0;
         @include box-sizing;
         @include screen('mobile') {
-            padding: 1em 0;
+          display: block;
+          margin: 0 0 0.4em;
+        }
+        a {
+          line-height: 1.5;
+          display: block;
+          font-weight: bold;
+          padding: 0.5em 0px;
+          @include box-sizing;
+          color: $lightColor;
+          &:hover {
+            box-shadow: none;
+            color: lighten($lightColor, 5);
+          }
+          &:focus-visible {
+            box-shadow: 0 0px 0px 2px $lightColor inset;
+          }
         }
         ul {
-            @include li-reset;
+          margin-top: 5px;
+          @include screen('mobile') {
+            width: auto;
+            display: none;
+          }
+          li {
+            display: block;
+            margin: 0;
+            border: none;
+            background: none;
+            width: 100%;
             @include screen('mobile') {
-                width: 100%;
-                display: block;
-                margin: 0px auto;
+              display: inline-block;
+              width: auto;
             }
-            li {
-                display: inline-block;
-                text-align: left;
-                vertical-align: top;
-                margin: 0 -5px 1em 0;
-                @include box-sizing;
-                @include screen('mobile') {
-                    display: block;
-                    margin:0 0 .4em
-                }
-                a {
-                    line-height: 1.5;
-                    display: block;
-                    font-weight: bold;
-                    padding: .5em 0px;
-                    @include box-sizing;
-                    color:$lightColor;
-                    &:hover{
-                        box-shadow: none;
-                        color:lighten($lightColor, 5);
-                    }
-                    &:focus{
-                        box-shadow: 0 0px 0px 1px $lightColor inset;
-                    }
-                }
-                ul {
-                    margin-top: 5px;
-                    @include screen('mobile') {
-                        width: auto;
-                        display: none;
-                    }
-                    li {
-                        display: block;
-                        margin: 0;
-                        border: none;
-                        background: none;
-                        width: 100%;
-                        @include screen('mobile') {
-                            display:inline-block;
-                            width:auto;
-                        }
-                        a {
-                            display: block;
-                            //@include aSetting_nocolor;
-                            font-weight: normal;
-                            text-align: left;
-                            font-size: .938em;
-                            line-height: 1.5em;
-                            padding: .5em .5em .5em .2em;
-                            background: none;
-                            color:#f0f0f0;
-                            @include screen('mobile') {
-                                padding:.3em .2em;
-                            }
-                            &:hover{
-                                color:#fff;
-                            }
-                        }
-                    }
-                    //第三層關閉
-                    ul {
-                        display: none;
-                    }
-                }
+            a {
+              display: block;
+              //@include aSetting_nocolor;
+              font-weight: normal;
+              text-align: left;
+              font-size: 0.938em;
+              line-height: 1.5em;
+              padding: 0.5em 0.5em 0.5em 0.2em;
+              background: none;
+              color: #f0f0f0;
+              @include screen('mobile') {
+                padding: 0.3em 0.2em;
+              }
+              &:hover {
+                color: #fff;
+              }
             }
+          }
+          //第三層關閉
+          ul {
+            display: none;
+          }
         }
+      }
     }
+  }
 }
-.branch_list{
-    margin:15px;
-    .container{
-        background: $color-bg;
-        padding:1.5em 2em;
-        ul{
-            display:flex;
-            flex-wrap:wrap;
-            @include li-reset;
-        }
-        li{
-            flex: 0 1 25%;
-            margin:.5em 0;
-            color: $color-word;
-            @include screen('tablet'){
-                flex-basis: 50%;
-            }
-            @include screen('xs_mobile'){
-                flex-basis:100%;
-            }
-            .branch{
-                font-weight: bold;
-                font-size: 1em;
-                color:$primaryColor;
-                margin:0 0 .5em 0;
-            }
-            span{
-                display: inline-block;
-                margin-right: 1em;
-                font-size: .938em;
-            }
-        }
-        .address{
-            font-size: .938em;
-            a{
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                vertical-align: middle;
-                img{
-                    width: 100%;
-                }
-            }
-        }
+.branch_list {
+  margin: 15px;
+  .container {
+    background: $color-bg;
+    padding: 1.5em 2em;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      @include li-reset;
     }
+    li {
+      flex: 0 1 25%;
+      margin: 0.5em 0;
+      color: $color-word;
+      @include screen('tablet') {
+        flex-basis: 50%;
+      }
+      @include screen('xs_mobile') {
+        flex-basis: 100%;
+      }
+      .branch {
+        font-weight: bold;
+        font-size: 1em;
+        color: $primaryColor;
+        margin: 0 0 0.5em 0;
+      }
+      span {
+        display: inline-block;
+        margin-right: 1em;
+        font-size: 0.938em;
+      }
+    }
+    .address {
+      font-size: 0.938em;
+      a {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
